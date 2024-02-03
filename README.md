@@ -1,4 +1,4 @@
-# EcommerceTesting
+# Ecommerce Automation Testing
 This project demonstrate testing of ecommerce site(TechPanda) with selenium, java and TestNG
 ## Objective of this Project
 To demonstrate UI webtesting of an ecommerce site. Project feature includes
