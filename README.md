@@ -29,8 +29,9 @@ Implementation of Core framework/package/Jar. Core framework consists of followi
 * Selenium 4.16  
 * Aventstack extentreports 3.1.5(parent-child report can be created using this version only)
 ###### what's coming up next  
-* how to install/download.  
-* Integrations with Dockers
+* how to install/download.
+* Jenkins declarative pipline using Groovy.
+* Integrations with Dockers.
 
 
 
