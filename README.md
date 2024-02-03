@@ -1,2 +1,2 @@
 # EcommerceTesting
-This project demonstrate testing or ecommerce site with selenium and java
+This project demonstrate testing of ecommerce site with selenium and java
