@@ -17,6 +17,12 @@ public class MobilePage extends AllPages
     private final By sortArrowXpth  = By.xpath("//div[@class='category-products']/div[@class='toolbar']/div[@class='sorter']/div[@class='sort-by']/a");
     public final By productlist =  By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li");
 
+    private final By product = By.xpath("//a[@title='Xperia']//following-sibling::div//button");
+    private final By btnCompare = By.xpath("//button[@title='Compare']//span[contains(text(),'Compare')]");
+
+    private final By hdPopUP = By.xpath("//h1[contains(text(),'Compare Products')]");
+    private final By btnClosPopup = By.xpath("//button[@title='Close Window']");
+
 
     public MobilePage(WebDriver driver) {
 
@@ -29,6 +35,33 @@ public class MobilePage extends AllPages
         //Click(selectDropDown);
         SelectByText(selectDropDown,text);
         Click(sortArrowXpth );
+    }
+
+    public void SelectAddToCart(String productTitle)
+    {
+       final By product = By.xpath("//a[@title='"+productTitle+"']//following-sibling::div//button");
+       Click(product);
+
+    }
+
+    public void SelectProductToCompare(String productTitle)
+    {
+        By loc = By.xpath("//a[@title='"+productTitle+"']//following-sibling::div//a[@class='link-compare']");
+        Click(loc);
+    }
+
+    public void ClickCompare()
+    {
+        Click(btnCompare);
+    }
+    public void VerifyComparePopUP()
+    {
+      coreAssert.SoftAssertAreTrue(IsVisible(hdPopUP),"Verify pop up is opened");  ;
+    }
+
+    public void ClosePopup()
+    {
+        Click(btnClosPopup);
     }
 
     public void VerifySort(By locator, String text)

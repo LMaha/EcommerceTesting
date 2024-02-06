@@ -4,6 +4,8 @@ import Mobile.ExtendFromCore.AllPages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.io.IOException;
+
 public class HomePage extends AllPages
 {
 
@@ -16,8 +18,8 @@ public class HomePage extends AllPages
         super(driver);
     }
 
-    public void GoToMobilePage()
-    {
+    public void GoToMobilePage() throws IOException {
+        WaitForCondition(mobilelinkXpath, "waiting for page to load");
         Click(mobilelinkXpath);
     }
 
